@@ -1,0 +1,40 @@
+/* ===================================================================
+ * fonts.scss
+ *
+ * ------------------------------------------------------------------- */
+
+
+/*
+ * GillSans
+================================================================================ */
+
+@font-face {
+  font-family: "GillSans";
+  src: url("../fonts/GillSans.woff2") format("woff2"), url("../fonts/GillSans.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "GillSans-bold";
+  src: url("../fonts/GillSans-Bold.woff2") format("woff2"), url("../fonts/GillSans-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "GillSans-light";
+  src: url("../fonts/GillSans-Light.woff2") format("woff2"), url("../fonts/GillSans-Light.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "GillSans-semibold";
+  src: url("../fonts/GillSans-SemiBold.woff2") format("woff2"), url("../fonts/GillSans-SemiBold.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+
