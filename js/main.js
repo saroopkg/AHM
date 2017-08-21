@@ -1,5 +1,5 @@
 /* ===================================================================
- * Dazzle - Main JS
+ * Main JS
  *
  * ------------------------------------------------------------------- */ 
 
@@ -37,8 +37,38 @@
 	
 	/* Switch header color
 	 *--------------------------------------------------- */
-	 $('header.fixed').midnight();
-	
+	// $('header.fixed').midnight();
+	var top1 = $('#home').offset().top;
+	var top2 = $('#real-estate').offset().top;
+	var top3 = $('#fandb').offset().top;
+	var top4 = $('#investments').offset().top;
+	var top5 = $('#contacts').offset().top;
+
+	$(document).scroll(function() {
+	  var scrollPos = $(document).scrollTop();
+	  
+	  if (scrollPos >= top1 && scrollPos < top2) {
+		$('#header').css('background-color', '#000');
+	  }
+	  
+	 else if (scrollPos >= top2 && scrollPos < top3) {
+		$('#header').css('background-color', '#ff6600');
+	  } 
+	  
+	  else if (scrollPos >= top3 && scrollPos < top4) {
+		$('#header').css('background-color', '#558ed5');
+	  } 
+	  
+	  else if (scrollPos >= top4 && scrollPos < top5) {
+		$('#header').css('background-color', '#008000');
+	  } 
+	  
+	  else if (scrollPos >= top5) {
+    	$('#header').css('background-color', '#e9b338');
+  	  }
+	});
+
+
 
 
 	/* Mobile Menu

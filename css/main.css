@@ -342,7 +342,7 @@ p img {
 #header-nav-wrap .header-main-nav {
   display: inline-block;
   list-style: none;
-  height: 89px;
+ /* height: 89px;*/
   margin: 0;
 }
 
@@ -395,11 +395,11 @@ p img {
 }
 
 @media only screen and (max-width: 768px) {
-  .header-logo a {
+/*  .header-logo a {
     width: 88px;
     height: 20px;
     background-size: 88px 20px;
-  }
+  }*/
   #header-nav-wrap {
     display: none;
     height: auto;
@@ -407,12 +407,12 @@ p img {
     right: auto;
     left: 0;
     background-color: #111111;
-    padding: 120px 40px 54px;
+    /*padding: 120px 40px 54px;*/
   }
   #header-nav-wrap .header-main-nav {
     display: block;
     height: auto;
-    margin: 0 0 4.2rem 0;
+    /*margin: 0 0 4.2rem 0;*/
     border-top: 1px solid rgba(255, 255, 255, 0.03);
   }
   #header-nav-wrap .header-main-nav li {
@@ -465,16 +465,10 @@ p img {
  *  10. home - (_site-layout.scss)
  *
  * ------------------------------------------------------------------- */
-.midnightHeader.green-header{background:#008000;}
-.midnightHeader.orange-header{background:#ff6600;}
-.midnightHeader.blue-header{background:#558ed5;}
-.midnightHeader.yellow-header{background:#e9b338;}
-
-
 
 #home, #real-estate, #fandb, #investments, #contacts {width: 100%; background-color: transparent;  position: relative;  display: table;}
 #contacts [class*="col-"]{padding:0!important;}
-.ahmpara, .repara, .fandbpara, .investpara{width:90%; max-width:550px; margin:0 auto;}
+.ahmpara, .repara, .fandbpara, .investpara{width:90%; max-width:700px; margin:0 auto;}
 .repara, .fandbpara, .investpara{ color:#fff; padding:30px; -webkit-box-sizing:border-box; box-sizing:border-box}
 .toggleContent{display:none; max-width:690px; margin:0 auto;}
 .toggleTitle a{text-transform:uppercase; width:250px; border-bottom:solid 1px #000; border-top:solid 1px #000; color:#000; font-size:18px; font-family:"GillSans-SemiBold", sans-serif; display:block; margin:20px auto; padding:15px 0; line-height:24px; position:relative;}
