@@ -8,8 +8,8 @@
 	"use strict";
 
 	var cfg = {		
-		scrollDuration : 800, // smoothscroll duration
-		mailChimpURL   : 'http://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e65110b38d' // mailchimp url
+		scrollDuration : 800 // smoothscroll duration
+		//mailChimpURL   : 'http://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e65110b38d' // mailchimp url
 	},	
 
 	$WIN = $(window);	
@@ -30,44 +30,26 @@
 			$('html, body').animate({ scrollTop: 0 }, 'normal');
 
          // will fade out the whole preloader DIV that covers the website.
-	      $("#preloader").delay(500).fadeOut('slow');
+	      $("#preloader").delay(300).fadeOut('slow');
 	  
 	  	});
 	};
 	
 	/* Switch header color
 	 *--------------------------------------------------- */
-	// $('header.fixed').midnight();
-	var top1 = $('#home').offset().top;
-	var top2 = $('#real-estate').offset().top;
-	var top3 = $('#fandb').offset().top;
-	var top4 = $('#investments').offset().top;
-	var top5 = $('#contacts').offset().top;
-
-	$(document).scroll(function() {
-	  var scrollPos = $(document).scrollTop();
-	  
-	  if (scrollPos >= top1 && scrollPos < top2) {
-		$('#header').css('background-color', '#000');
-	  }
-	  
-	 else if (scrollPos >= top2 && scrollPos < top3) {
-		$('#header').css('background-color', '#ff6600');
-	  } 
-	  
-	  else if (scrollPos >= top3 && scrollPos < top4) {
-		$('#header').css('background-color', '#558ed5');
-	  } 
-	  
-	  else if (scrollPos >= top4 && scrollPos < top5) {
-		$('#header').css('background-color', '#008000');
-	  } 
-	  
-	  else if (scrollPos >= top5) {
-    	$('#header').css('background-color', '#e9b338');
-  	  }
-	});
-
+		
+	$(window).scroll(function () {
+    $('.page').each(function () {
+        var w = $(window).scrollTop();
+        var t = $(this).offset().top - 100;
+		var section_id =$(this).attr('id') ;
+		
+        if (w > t) {
+			$('header').attr('class', "") ;
+            $('header').addClass(section_id);
+        }
+    });
+});
 
 
 
@@ -147,14 +129,14 @@
 	expandCollapse();
 	/* ------------------------------------------ Toggle ends */
 
-	$(document).ready(function(){
+	/*$(document).ready(function(){
     $('.home-content').css('height', $(window).height());
-    // Comma, not colon ----^
+    
 	});
 	$(window).resize(function(){
     $('.home-content').css('height', $(window).height());
-    // Comma, not colon ----^
-	});
+    
+	});*/
 	
 
 
@@ -163,7 +145,7 @@
 
   /* Highlight the current section in the navigation bar
 	* ------------------------------------------------------ */
-	var ssWaypoints = function() {
+	/*var ssWaypoints = function() {
 
 		var sections = $("section"),
 		navigation_links = $(".header-main-nav li a");	
@@ -189,7 +171,7 @@
 
 		});
 	};
-
+*/
 
   /* Smooth Scrolling
 	* ------------------------------------------------------ */
@@ -220,7 +202,7 @@
 	var ssAOS = function() {
 
 		AOS.init( {
-      	offset: 200,
+      	//offset: 200,
       	duration: 600,
       	easing: 'ease-in-sine',
       	delay: 300,
@@ -236,7 +218,7 @@
  
   /* Back to Top
 	* ------------------------------------------------------ */
-	var ssBackToTop = function() {
+	/*var ssBackToTop = function() {
 
 		var pxShow  = 500,         // height on which the button will show
 		fadeInTime  = 400,         // how slow/fast you want the button to show
@@ -263,13 +245,13 @@
 		ssMobileMenu();
 		//ssFitVids();
 		//ssOwlCarousel();
-		ssWaypoints();
+		//ssWaypoints();
 		ssSmoothScroll();
 		//ssPlaceholder();
 		//ssAlertBoxes();
 		ssAOS();		
 		//ssAjaxChimp();
-		ssBackToTop();
+		//ssBackToTop();
 
 	})();
  

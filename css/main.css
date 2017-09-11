@@ -237,7 +237,11 @@ p img {
  *
  * ------------------------------------------------------------------- */
 
-#header {width: 100%; height: 89px!important; background-color: #000; position: fixed;  z-index: 501;}
+#header {width: 100%; height: 89px!important; background-color: #000; position: fixed; top:0;  z-index: 501;
+  -webkit-transition: background-color .3s ease-out;
+  -moz-transition: background-color .3s ease-out;
+  -o-transition: background-color .3s ease-out;
+  transition: background-color .3s ease-out;}
 .header-logo {-webkit-transition: all 1s ease-in-out; transition: all 1s ease-in-out; z-index: 501; display:block; max-width:185px; padding-top:15px; float:left;}
 .header-logo a {display: block;  margin: 0; padding: 0; outline: 0; border: none; width: 185px; height: 59px; text-shadow: none; color: transparent;
   -webkit-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;}
@@ -251,7 +255,7 @@ p img {
   display: none;
   position: fixed;
   right: 32px;
-  top: 15px;
+  top: 25px;
   height: 42px;
   width: 42px;
   line-height: 42px;
@@ -407,6 +411,8 @@ p img {
     right: auto;
     left: 0;
     background-color: #111111;
+	position: absolute;
+    top: 89px;
     /*padding: 120px 40px 54px;*/
   }
   #header-nav-wrap .header-main-nav {
@@ -483,18 +489,20 @@ h1.homeheading{color:#000; border-bottom:solid 1px #000;}
 h1.reheading{color:#ff6600; border-bottom:solid 1px #ff6600;}
 h1.fandbheading{color:#558ed5; border-bottom:solid 1px #558ed5;}
 h1.investheading{color:#008000; border-bottom:solid 1px #008000;}
-h1.contactheading{color:#fff; border-bottom:solid 1px #fff; max-width:70%; margin:0 auto;}
+h1.contactheading{color:#e9b338; border-bottom:solid 1px #e9b338;}
 .repara{background:#ff6600;}
 .fandbpara{background:#558ed5;}
 .investpara{background:#008000;}
 
+
+#css-table {overflow: hidden;}
+#css-table .col {margin-bottom: -99999px; padding-bottom: 99999px; width:50%; float:left;}
 .contact-left{background:#e9b338; color:#fff;}
 .contact-left p{padding:50px 0;}
+@media only screen and (max-width: 690px) {
+	#css-table .col{width:100%; float:none;}
+}
 
-/*a.re:hover{color:#ff6600!important;}
-a.fb:hover{color:#558ed5!important;}
-a.invest:hover{color:#008000!important;}
-a.cont:hover{color:#e9b338!important;}*/
 
 
 .no-js #home {
@@ -506,7 +514,7 @@ a.cont:hover{color:#e9b338!important;}*/
   width: 100%;
   height: 100%;
   vertical-align:middle;
-  padding:72px 0 0;
+  padding:89px 0 0;
 }
 
 
@@ -966,3 +974,8 @@ footer {
 		border-radius:0;
 	}
 }
+.home{background-color:#000!important;}
+.real-estate{background-color:#ff6600!important;}
+.fandb{background-color:#558ed5!important;}
+.investments{background-color:#008000!important;}
+.contacts{background-color:#e9b338!important;}

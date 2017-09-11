@@ -25,13 +25,13 @@
     <div class="header-logo">
         <a class="smoothscroll" href="#home"><img src="images/logo.png" alt="AHM Holding"></a>
     </div>
-    <nav id="header-nav-wrap">
+    <nav id="header-nav-wrap" class="primary-nav">
         <ul class="header-main-nav">
             <!--<li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>-->
-            <li><a class="smoothscroll re"  href="#real-estate" title="Real Estate">Real Estate</a></li>
-            <li><a class="smoothscroll fb"  href="#fandb" title="F&amp;B">F&amp;B</a></li>
-            <li><a class="smoothscroll invest"  href="#investments" title="Investments">Investments</a></li>
-            <li><a class="smoothscroll cont"  href="#contacts" title="Contact Us">Contact Us</a></li>	
+            <li><a class="smoothscroll"  href="#real-estate" title="Real Estate">Real Estate</a></li>
+            <li><a class="smoothscroll"  href="#fandb" title="F&amp;B">F&amp;B</a></li>
+            <li><a class="smoothscroll"  href="#investments" title="Investments">Investments</a></li>
+            <li><a class="smoothscroll"  href="#contacts" title="Contact Us">Contact Us</a></li>	
         </ul>          
     </nav>
     <a class="header-menu-toggle" href="#"><span>Menu</span></a>
@@ -39,7 +39,7 @@
 </header>
 <!-- header ends ================================================== -->
 <!-- AHM HOLDING begins ================================================== -->
-<section id="home">
+<section id="home" class="page">
     <div class="home-content">
         <div class="smoothslides" id="myslideshow1">
         	<img src="images/ahm-holding1.jpg" alt="AHM Holding">
@@ -64,7 +64,7 @@
 </section>  
 <!-- AHM HOLDING ends =================================================== -->
 <!-- REAL ESTATE begins ================================================= -->
-<section id="real-estate">
+<section id="real-estate" class="page">
     <div class="home-content">
         <div class="smoothslides" id="myslideshow2">
         	<img src="images/real-estate1.jpg" alt="Real Estate">
@@ -78,7 +78,7 @@
 </section>  
 <!-- REAL ESTATE ends =================================================== -->
 <!-- F&B begins ========================================================= -->
-<section id="fandb">
+<section id="fandb" class="page">
     <div class="home-content">
         <div class="smoothslides" id="myslideshow3">
         	<img src="images/fandb1.jpg" alt="F&amp;B">
@@ -93,7 +93,7 @@
 </section>  
 <!-- F&B ends =================================================== -->
 <!-- Investments begins ================================================== -->
-<section id="investments">
+<section id="investments" class="page">
     <div class="home-content">
         <div class="smoothslides" id="myslideshow4">
         	<img src="images/investments1.jpg" alt="Investments">
@@ -108,17 +108,21 @@
 </section>  
 <!-- Investments ends =================================================== -->
 <!-- Contact Us begins ================================================== -->
-<section id="contacts">
+<section id="contacts" class="page" >
     <div class="home-content">
-        <div class="col-six contact-left col-md-1">
-        	<h1 class="contactheading">Contact Us</h1>
+    	<div class="row">
+    	<h1 class="contactheading">Contact Us</h1>
+        </div>
+        <div id="css-table">
+        <div class="col contact-left">
+        	
             <p>AHM Holding<br>Office 2908, Burlington Tower<br>Al Abraj Street<br>Business Bay<br>Dubai, U.A.E<br><br>Contact Number: +971 4 240 8824<br>Email: gem@ahmholding.com</p>
         </div>
-        <div class="col-six">
+        <div class="col">
            <iframe src="https://www.google.com/maps/d/embed?mid=1LTWenCOO2Uw_v2azfdIavuFtfAI" width="100%" height="412" frameborder="0"></iframe>
         </div>
         <div class="clearboth"></div>
-       
+        </div>
     </div>
 </section>  
 <!-- Contact Us ends =================================================== -->
@@ -130,6 +134,8 @@
 </div>  
 <!-- Java Script ====================================================== -->
 <script src="js/jquery-2.1.3.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
 </body>
